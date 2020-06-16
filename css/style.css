@@ -71,7 +71,6 @@ p{
 
 #menu li.active{
    background-color: darkgrey;
-    margin: 2px 0 2px 0;
     text-decoration: underline;
     
 }
