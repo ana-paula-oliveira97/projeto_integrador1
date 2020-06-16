@@ -70,9 +70,9 @@ p{
 }
 
 #menu li.active{
-    background-color: rgb(183, 66, 194);
+   background-color: darkgrey;
     margin: 2px 0 2px 0;
-    text-decoration: overline;
+    text-decoration: underline;
     
 }
 
