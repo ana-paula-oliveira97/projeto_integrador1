@@ -68,3 +68,11 @@ p{
 .form{
     margin: 20px;
 }
+
+#menu li.active{
+    background-color: rgb(183, 66, 194);
+    margin: 2px 0 2px 0;
+    text-decoration: overline;
+    
+}
+
