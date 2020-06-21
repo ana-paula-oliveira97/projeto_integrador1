@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <header>
+            <div class="topo">Salão da Vaidosa</div>
+            <div id="menu">
+                <ul>
+                    <li>
+                        <a href="index.html">Início</a>
+                    </li>
+                    <li>
+                        <a href="Sobre.html ">Sobre </a>
+                    </li>
+                    <li>
+                        <a href="CatálogoMaquiagem.html">Catálogo de maquiagem</a>
+                    </li>
+                    <li>
+                        <a href="CatálogoUnha.html">Catálogo de unha</a>
+                    </li>
+                    <li>
+                        <a href="CatálogoCabelo.html">Catálogo de cabelo</a>
+                    </li>
+                    <li class="active">
+                        <a href="Formulário.html">Formulário de agendamento</a>
+                    </li>
+                </ul>
+            </div>
+    </header>
+    <h1>Agende seu horário</h1>
+<br>
+    <div class="formulario">
+        <form action="" method="POST" onsubmit="return validar();">  
+            <label id="Nome">
+                Nome: <br>
+            </label>
+            <input type="text" maxlength="20" size="31" id="tNome" name="txtNome" placeholder="Digite o Nome" autofocus required>
+<br>
+    
+            <label id="Numero">
+                Contato:<br>
+            </label>
+            <input type="text" maxlength="20" size="30" id="tNumero" name="txtNumero" placeholder="Digite um Número" required onblur = "maskNumero();">
+<br>
+    
+    <div class="col-md-3 mb-3">
+         <label id="validationTooltip04">Selecione o dia:</label>
+        <select class="custom-select" id="data" required>
+            <option value="">Qual dia prefere ser atendida </option>
+            <option value="1">Segunda - Feira</option>
+            <option value="2">Terça - Feira</option>
+            <option value="3">Quarta - Feira</option>
+            <option value="4">Quinta - Feira</option>
+            <option value="5">Sexta - Feira</option>
+            <option value="6">Sábado </option>
+        </select>
+
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <label id="validationTooltip05">Selecione o Horário:</label>
+        <select class="custom-select" id="horario" required>
+            <option value="">Horarios para Agendamento</option>
+            <option value="1">9:00 ás 11:00</option>
+            <option value="2">11:00 ás 13:00</option>
+            <option value="3">13:00 ás 15:00</option>
+            <option value="4">15:00 ás 17:00</option>
+            <option value="5">17:00 ás 19:00</option>
+        </select>
+<br>
+    </div>    
+        <button type="submit" name="btnEnviar">Enviar</button>
+        <button type="reset" name="btnCancelar">Cancelar</button>
+
+
+        </form>
+    </div>
+<br>
+    
+    
+    <div class="rodape">
+        Informação:
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="img/instagram.png" class="logo" width="100%" alt="instagram">
+                </div>
+                <div class="col-lg-4">
+                    <img src="img/whatsapp.png" class="logo" width="100%" alt="whatsApp">
+                </div>
+                <div class="col-lg-4">
+                    <img src="img/facebook.png" class="logo" width="100%" alt="facebook">
+                </div>
+            </div>
+        </div>
+        <br>
+        <footer>Desenvolvido por Ana Paula de Oliveira / Débora Santos Oliveira @2020</footer>
+    </div>
+</body>
+</html>
