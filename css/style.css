@@ -187,5 +187,15 @@ div.figure {
     color: aliceblue;
 }
 
+.foto_rodape{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.foto_rodape1{
+   margin: 2px;
+    height: 60px;
+}
 
 
