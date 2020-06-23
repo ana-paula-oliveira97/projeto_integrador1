@@ -1,28 +1,121 @@
-function validar(){
-    var nome =Formulário.nome.value;
-    var contato =Formulário.contato.value;
-    var semana =Formulário.semana.value;
-    var horario =Formulário.horario.value;
+const nome = document.getElementById('nome')
+const serviso = document.getElementById('serviso')
+const semana = document.getElementById('semana')
+const horario = document.getElementById('horario')
+const formulario = document.getElementById('formulario')
+const telefone = document.getElementById('telefone')
+const comentario = document.getElementById('comentario')
+const resposta = document.getElementById('resposta')
+
+formulario.onsubmit = event => {
+    event.preventDefault ()
+
+    if (
+        !validarserviso() | 
+        !validarsemana() |
+        !validarhorario() |
+        !validartelefone() |
+        !validarcomentario() |
+        !validarnome ()         
+    )
+        return alert ('Agentamento feito com sucesso. ')
     
-    if(nome == ""){
-    alert('Prencha o campo nome');
-    Formulário.nome.focus();
-    return false;
+      /*validação do nome */
+ function validarnome(){
+
+    nome.value = nome.value.trim()
+
+        if (!nome.value)  {
+            resposta.textContent = 'O campo Nome deve ser prencido!'
+            nome.focus()
+            return false  
+        }
+
+        const regex = /^([a-z]{2,}([\s-][a-z]{2,})+)$/gi
+
+        if (!regex.test(nome.value)){
+            resposta.textContent = 'Formato de Nome invalido, digite novamente !'
+            nome.focus()
+            return false
+        }
+                return true
+ }
+
+
+/* validação do serviso  */
+
+function validarserviso(){
+
+    if (!serviso.value){
+        resposta.textContent = 'Selecione um campo!'
+        serviso.focus()
+        return false
     }
-    if(contato ==""){
-    alert('Prencha o campo contato');
-    Formulário.contato.focus();
-    return false;
+
+    return true
+}
+
+/* validar semana */
+function validarsemana(){
+
+    if (!semana.value){
+        resposta.textContent = 'Selecione um campo!'
+        semana.focus()
+        return false
     }
-    if(semana == ""){
-    alert('Selecione uma opção');
-    Formulário.semana.focus();
-    return false;
+
+    return true
+}
+
+/* validar horario */
+function validarhorario(){
+
+    if (!horario.value){
+        resposta.textContent = 'Selecione um campo!'
+        horario.focus()
+        return false
     }
-    if(horario == ""){
-    alert('Selecione uma opção');
-    Formulário.horario.focus();
-    return false;
+
+    return true
+
+}
+
+/* validar telefone */
+
+function validartelefone () {
+    telefone.value = telefone.value.trim()
+
+    if (!telefone.value){
+        telefone.textContent = 'Campo obrigatorio !'
     }
-    
+}
+
+    const regex = ('^\\([0-9]{2}\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$');
+
+    if (!regex.test (telefone.value)){
+        resposta.textContent = 'Formato de telefone inválido!'
     }
+    return true
+
+
+/* validar mensagem */
+
+function validarcomentario(){
+    comentario.value = comentario.value.trim()
+
+    if (!comentario.value){
+
+        resposta.textContent = 'comentario obrigatorio!'
+        comentario.focus()
+        
+    }
+
+    if (comentario.value.length < 3){
+        resposta.textContent = 'o campo deve ter no minino 3 caracteres!'
+        comentario.focus
+        return false
+    }
+    return true
+}
+}
+

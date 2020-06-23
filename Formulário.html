@@ -34,62 +34,67 @@
                 </ul>
             </div>
     </header>
-    <h1>Agende seu horário</h1>
-<br>
-    <div class="formulario">
-        <form action="" method="POST" onsubmit="return validar();">  
-            <label id="Nome">
-                Nome: <br>
-            </label>
-            <input type="text" maxlength="20" size="31" id="tNome" name="txtNome" placeholder="Digite o Nome" autofocus required>
-<br>
     
-            <label id="Numero">
-                Contato:<br>
-            </label>
-            <input type="text" maxlength="20" size="30" id="tNumero" name="txtNumero" placeholder="Digite um Número" required onblur = "maskNumero();">
-<br>
-    
-    <div class="col-md-3 mb-3">
-         <label id="validationTooltip04">Selecione o dia:</label>
-        <select class="custom-select" id="data" required>
-            <option value="">Qual dia prefere ser atendida </option>
-            <option value="1">Segunda - Feira</option>
-            <option value="2">Terça - Feira</option>
-            <option value="3">Quarta - Feira</option>
-            <option value="4">Quinta - Feira</option>
-            <option value="5">Sexta - Feira</option>
-            <option value="6">Sábado </option>
+    <form id="formulario" novalidate class="form">  
+        
+        <h1>Formulário de agendamento </h1>
+
+        <input type="text" id="nome" placeholder="Nome completo" />
+
+        <select id="serviso">
+            <option value="">O que deseja fazer ?</option>
+            <option value="1">Corte de Cabelo</option>
+            <option value="2">Maquiagem</option>
+            <option value="3">Manicure</option>
+            <option value="4">Maquiagem e Manicure</option>
+            <option value="5">Corte de Cabelo e Manicure</option>
+            <option value="6">Corte de Cabelo e Manicure</option>
+            <option value="6">Corte de Cabelo, Maquiagem e Manicure</option>
+             
         </select>
+            <p></p>
+                <select id="semana">
+                    <option value="">Qual dia prefere ser atendida </option>
+                    <option value="1">Segunda - Feira</option>
+                    <option value="2">Terça - Feira</option>
+                    <option value="3">Quarta - Feira</option>
+                    <option value="4">Quinta - Feira</option>
+                    <option value="5">Sexta - Feira</option>
+                    <option value="6">Sábado </option>
+                </select>
 
-    </div>
+                        <select id="horario">
+                            <option value="">Horarios para Agendamento</option>
+                            <option value="1">9:00 ás 11:00</option>
+                            <option value="2">11:00 ás 13:00</option>
+                            <option value="3">13:00 ás 15:00</option>
+                            <option value="4">15:00 ás 17:00</option>
+                            <option value="5">17:00 ás 19:00</option>
+                        </select>
+        <p></p>
+        <input id="telefone" placeholder="Numero para contado ">
+        <p></p>
 
-    <div class="col-md-3 mb-3">
-        <label id="validationTooltip05">Selecione o Horário:</label>
-        <select class="custom-select" id="horario" required>
-            <option value="">Horarios para Agendamento</option>
-            <option value="1">9:00 ás 11:00</option>
-            <option value="2">11:00 ás 13:00</option>
-            <option value="3">13:00 ás 15:00</option>
-            <option value="4">15:00 ás 17:00</option>
-            <option value="5">17:00 ás 19:00</option>
-        </select>
+        <textarea id="comentario" cols="80" rows="5" placeholder="Digite aqui se tiver alergia a algum produto ou usar algum produto em expecifico."></textarea>
+
+        <p></p>
+
+        <button type="submit">Agendar horario</button>
+       
+    </form>
+
+    <p id="resposta"></p>
+
+    <script src="js/formulario.js"></script>
+
 <br>
-    </div>    
-        <button type="submit" name="btnEnviar">Enviar</button>
-        <button type="reset" name="btnCancelar">Cancelar</button>
-
-
-        </form>
-    </div>
-<br>
-    
+<p id="resposta"></p>
     
 <footer class="rodape">
+    Informação:
 
-    <p class="endereço">Rua das rosa - Ribeirão Preto - Cep: 14015-050 <br> 
-    E-mail: salao-vaidosa@hotmail.com    
-</p>
+    <p class="endereço">Rua das rosa - Ribeirão Preto - Cep: 14015-050</p>     
+        
             <div class="redes">
                      <a href="https://www.facebook.com/Sal%C3%A3o-da-Vaidosa-102611308169640/?modal=admin_todo_tour">
                 <img src="img/face.png" alt="facebook" class="foto_rodape">
