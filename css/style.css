@@ -133,14 +133,6 @@ div.figure {
     width:40px;
 }
 
-.form h1{
-    text-align: center;
-}
-
-.form{
-    margin: 20px;
-}
-
 #menu li.active{
     margin: 2px 0 2px 0;
     text-decoration: overline;

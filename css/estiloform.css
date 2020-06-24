@@ -38,14 +38,6 @@ select{
 }
 
 
-
-
-.btn:active{
-    text-align: center;
-    background-color: rgb(75,0,130);
-    color: white;
-}
-
 .comentario{
     margin: 15px;
 }
