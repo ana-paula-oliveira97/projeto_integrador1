@@ -12,10 +12,10 @@ formulario.onsubmit = event => {
 
     if (
         validarnome() &&
-        validarserviso() &&
+        validartelefone() &&
         validarsemana() &&
         validarhorario() &&
-        validartelefone() &&
+        validarserviso() &&
         validarcomentario() 
         
     ) {
