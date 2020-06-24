@@ -97,7 +97,7 @@ function validarhorario(){
         telefone.value = telefone.value.trim()
 
         if (!telefone.value) {
-            telefone.textContent = 'Digite um numero de Telefone !'
+            resposta.textContent = 'Digite um numero de Telefone !'
             telefone.focus()
             return false
         }
