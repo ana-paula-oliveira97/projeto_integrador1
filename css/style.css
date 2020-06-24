@@ -80,6 +80,21 @@ body{
     transform: scale(1.1);
 }
 
+
+
+.item-destaque1{
+    text-align: center;
+    width: 300px;
+    height:300px;
+     transition: all linear 0.4s;
+    
+}
+
+.item-destaque1:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
 p{
     text-align: center;
     font-size: 18px;
@@ -138,7 +153,7 @@ div.figure {
 #menu li.active{
     margin: 2px 0 2px 0;
     text-decoration: overline;
-    background-color: rgb(151, 94, 144); 
+    background-color: rgb(110, 10, 99); 
 }
 
 .card{
