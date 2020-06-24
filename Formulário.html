@@ -41,6 +41,31 @@
             <h1 class="h1_form">Formulário de agendamento </h1>
     
             <input type="text" id="nome"  placeholder="Nome completo" /> <p>
+                <p></p>
+                <input id="telefone" placeholder="Numero para contado ">
+                <p></p>
+    
+            </select>
+            <p></p>
+                <select id="semana">
+                    <option value="">Qual dia prefere ser atendida </option>
+                    <option value="1">Segunda - Feira</option>
+                    <option value="2">Terça - Feira</option>
+                    <option value="3">Quarta - Feira</option>
+                    <option value="4">Quinta - Feira</option>
+                    <option value="5">Sexta - Feira</option>
+                    <option value="6">Sábado </option>
+                </select>
+                <p></p>
+                <select id="horario">
+                    <option value="">Horarios para Agendamento</option>
+                    <option value="1">9:00 ás 11:00</option>
+                    <option value="2">11:00 ás 13:00</option>
+                    <option value="3">13:00 ás 15:00</option>
+                    <option value="4">15:00 ás 17:00</option>
+                    <option value="5">17:00 ás 19:00</option>
+                </select>
+                <p></p>
     
             <select id="serviso">
                 <option value="">O que deseja fazer ?</option>
@@ -52,32 +77,9 @@
                 <option value="6">Corte de Cabelo e Manicure</option>
                 <option value="6">Corte de Cabelo, Maquiagem e Manicure</option>
                  
-            </select>
-                <p></p>
-                    <select id="semana">
-                        <option value="">Qual dia prefere ser atendida </option>
-                        <option value="1">Segunda - Feira</option>
-                        <option value="2">Terça - Feira</option>
-                        <option value="3">Quarta - Feira</option>
-                        <option value="4">Quinta - Feira</option>
-                        <option value="5">Sexta - Feira</option>
-                        <option value="6">Sábado </option>
-                    </select>
-    
-                            <select id="horario">
-                                <option value="">Horarios para Agendamento</option>
-                                <option value="1">9:00 ás 11:00</option>
-                                <option value="2">11:00 ás 13:00</option>
-                                <option value="3">13:00 ás 15:00</option>
-                                <option value="4">15:00 ás 17:00</option>
-                                <option value="5">17:00 ás 19:00</option>
-                            </select>
-            <p></p>
-            <input id="telefone" placeholder="Numero para contado ">
-            <p></p>
-    
-            <textarea id="comentario" cols="40" rows="5" placeholder="Digite aqui se tiver alergia a algum produto ou usar algum produto em expecifico."></textarea>
-    
+             <br> <p></p>
+            <textarea class="comentario" id="comentario" cols="40" rows="5" placeholder="Digite aqui se tiver alergia a algum produto ou usar algum produto em expecifico."></textarea>
+        
             <p></p>
     
             <button class="btn" type="submit">Agendar horario</button>
@@ -89,7 +91,7 @@
     </div>
     
         <script src="js/formulario.js"></script>
-    
+        
 <footer class="rodape">
     Informação:
 
