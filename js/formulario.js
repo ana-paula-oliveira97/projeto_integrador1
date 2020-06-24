@@ -11,15 +11,19 @@ formulario.onsubmit = event => {
     event.preventDefault ()
 
     if (
-        !validarserviso() | 
-        !validarsemana() |
-        !validarhorario() |
-        !validartelefone() |
-        !validarcomentario() |
-        !validarnome ()         
-    )
-        return alert ('Agentamento feito com sucesso. ')
-    
+        validarnome() &&
+        validarserviso() &&
+        validarsemana() &&
+        validarhorario() &&
+        validartelefone() &&
+        validarcomentario() 
+        
+    ) {
+        alert("Agendamento feito com sucesso")
+        resposta.textContent = ""
+    }
+
+
       /*validação do nome */
  function validarnome(){
 
@@ -31,13 +35,20 @@ formulario.onsubmit = event => {
             return false  
         }
 
-        const regex = /^([a-z]{2,}([\s-][a-z]{2,})+)$/gi
+        //const regex = /^([a-z]{2,}([\s-][a-z]{2,})+)$/gi
 
-        if (!regex.test(nome.value)){
+      /*  if (!regex.test(nome.value)){
             resposta.textContent = 'Formato de Nome invalido, digite novamente !'
             nome.focus()
             return false
         }
+                return true */
+
+                if (nome.value.length <= 2) {
+                    resposta.textContent = 'Nome invalido, digite novamente !'
+                    nome.focus()
+                    return false
+                }
                 return true
  }
 
@@ -47,7 +58,7 @@ formulario.onsubmit = event => {
 function validarserviso(){
 
     if (!serviso.value){
-        resposta.textContent = 'Selecione um campo!'
+        resposta.textContent = 'Selecione o campo O que deseja fazer !'
         serviso.focus()
         return false
     }
@@ -59,7 +70,7 @@ function validarserviso(){
 function validarsemana(){
 
     if (!semana.value){
-        resposta.textContent = 'Selecione um campo!'
+        resposta.textContent = 'Selecione o dia da semana desejado!'
         semana.focus()
         return false
     }
@@ -71,7 +82,7 @@ function validarsemana(){
 function validarhorario(){
 
     if (!horario.value){
-        resposta.textContent = 'Selecione um campo!'
+        resposta.textContent = 'Selecione o horario dejado!'
         horario.focus()
         return false
     }
@@ -80,23 +91,27 @@ function validarhorario(){
 
 }
 
-/* validar telefone */
+    /* validar telefone */
 
-function validartelefone () {
-    telefone.value = telefone.value.trim()
+    function validartelefone() {
+        telefone.value = telefone.value.trim()
 
-    if (!telefone.value){
-        telefone.textContent = 'Campo obrigatorio !'
+        if (!telefone.value) {
+            telefone.textContent = 'Digite um numero de Telefone !'
+            telefone.focus()
+            return false
+        }
+        return true
     }
-}
 
-    const regex = ('^\\([0-9]{2}\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$');
+    //    const regex = /^\\([0-9]{2}\\)((3[0-9]{3}-[0-9]{4})|(9[0-9]{3}-[0-9]{5}))$/
 
-    if (!regex.test (telefone.value)){
+  /*  if (!telefone.value) {
         resposta.textContent = 'Formato de telefone inválido!'
+        return false
     }
     return true
-
+*/ 
 
 /* validar mensagem */
 
