@@ -1,4 +1,4 @@
-    @media( min-width:530px){
+    @media( min-width:350px){
         body{
          margin: 0%;
          padding: 0%;
@@ -9,8 +9,6 @@
          margin-left: auto;
          margin-right: auto;
         }
-        }
- @media (min-width:350px){
     .escolha{
         width: 320px;
         height: 20px;
