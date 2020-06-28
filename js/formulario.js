@@ -30,7 +30,7 @@ formulario.onsubmit = event => {
     nome.value = nome.value.trim()
 
         if (!nome.value)  {
-            resposta.textContent = 'O campo Nome deve ser prencido!'
+            resposta.textContent = 'O campo Nome deve ser preenchido!'
             nome.focus()
             return false  
         }
