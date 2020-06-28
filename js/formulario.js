@@ -1,5 +1,5 @@
 const nome = document.getElementById('nome')
-const serviso = document.getElementById('serviso')
+const servico = document.getElementById('servico')
 const semana = document.getElementById('semana')
 const horario = document.getElementById('horario')
 const formulario = document.getElementById('formulario')
@@ -15,7 +15,7 @@ formulario.onsubmit = event => {
         validartelefone() &&
         validarsemana() &&
         validarhorario() &&
-        validarserviso() &&
+        validarservico() &&
         validarcomentario() 
         
     ) {
@@ -53,13 +53,13 @@ formulario.onsubmit = event => {
  }
 
 
-/* validação do serviso  */
+/* validação do servico  */
 
-function validarserviso(){
+function validarservico(){
 
-    if (!serviso.value){
+    if (!servico.value){
         resposta.textContent = 'Selecione o campo O que deseja fazer !'
-        serviso.focus()
+        servico.focus()
         return false
     }
 

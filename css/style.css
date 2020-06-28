@@ -238,7 +238,7 @@ div.figure {
 
 
 input{
-    width: 330px;
+    width: 240px;
     font-size: 20px;
     height: 30px;
     border-radius: 10px 20px;
@@ -248,8 +248,8 @@ input{
 select{
     text-transform: uppercase;
     font-size: 15px;
-    width: 410px;
-    height: 30px;
+    width: 240px;
+    height: 40px;
     border-radius: 10px 20px;
     text-align: center;
 }
